@@ -93,9 +93,9 @@ class LoadSql {
       }
       if(params) {
         sql += ' limit ?, ?';
-        callback(sql, params);
+        return callback(sql, params);
       } else {
-        callback(sql);
+        return callback(sql);
       }
     } else {
       var me = this;
@@ -113,10 +113,10 @@ class LoadSql {
           if(params) {
             sql += ' limit ?, ?';
             // console.log("Sql: ",sql)
-            callback(sql, params);
+            return callback(sql, params);
           } else {
             // console.log("Sql: ",sql)
-            callback(sql);
+            return callback(sql);
           }
         }
       });
