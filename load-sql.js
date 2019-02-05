@@ -25,8 +25,9 @@ class LoadSql {
   load (file, q = {}, callback) {
     if(typeof callback === 'undefined') {
       callback = (sql, params) => { return new Promise(succeed => {
-        succeed(sql, params);
-      });
+          succeed(sql, params);
+        });
+      }
     }
 
     var params = null;
