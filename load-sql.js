@@ -22,13 +22,13 @@ class LoadSql {
     this.sqlCache = {};
   }
 
-  load (file, q = {}) {
-    return new Promise(succeed => {
-      this.load(file, q, succeed);
-    })
-  }
+  load (file, q = {}, callback) {
+    if(typeof callback === 'undefined') {
+      callback = (sql, params) => { return new Promise(succeed => {
+        succeed(sql, params);
+      });
+    }
 
-  load (file, q, callback) {
     var params = null;
     var orderBy = [];
     var where = [];
