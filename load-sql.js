@@ -22,14 +22,19 @@ class LoadSql {
     this.sqlCache = {};
   }
 
-  load (file, q = {}, callback) {
+  load(file, q = {}, callback) {
     if(typeof callback === 'undefined') {
-      callback = (sql, params) => { return new Promise(succeed => {
-          succeed(sql, params);
-        });
-      }
+      return new Promise(succeed => {
+        this.loadAndCallback(file, q, (sql, params) => {
+          succeed({sql, params});
+        })
+      });
+    } else {
+      this.loadAndCallback(file, q, callback);
     }
+  }
 
+  loadAndCallback (file, q = {}, callback) {
     var params = null;
     var orderBy = [];
     var where = [];
@@ -94,9 +99,9 @@ class LoadSql {
       }
       if(params) {
         sql += ' limit ?, ?';
-        return callback(sql, params);
+        callback(sql, params);
       } else {
-        return callback(sql);
+        callback(sql);
       }
     } else {
       var me = this;
@@ -114,10 +119,10 @@ class LoadSql {
           if(params) {
             sql += ' limit ?, ?';
             // console.log("Sql: ",sql)
-            return callback(sql, params);
+            callback(sql, params);
           } else {
             // console.log("Sql: ",sql)
-            return callback(sql);
+            callback(sql);
           }
         }
       });
