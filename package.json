@@ -1,0 +1,78 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@sei-atl/load-sql@^1.0.0",
+        "scope": "@sei-atl",
+        "escapedName": "@sei-atl%2fload-sql",
+        "name": "@sei-atl/load-sql",
+        "rawSpec": "^1.0.0",
+        "spec": ">=1.0.0 <2.0.0",
+        "type": "range"
+      },
+      "C:\\workspaces\\coke\\services\\mfi-action-service"
+    ]
+  ],
+  "_from": "@sei-atl/load-sql@^1.0.0",
+  "_hasShrinkwrap": false,
+  "_id": "@sei-atl/load-sql@1.0.12",
+  "_location": "/@sei-atl/load-sql",
+  "_nodeVersion": "6.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/load-sql_1.0.12_1540381106556_0.7849376985967249"
+  },
+  "_npmUser": {
+    "name": "sei-atl",
+    "email": "amonica@sei.com"
+  },
+  "_npmVersion": "4.6.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@sei-atl/load-sql@^1.0.0",
+    "scope": "@sei-atl",
+    "escapedName": "@sei-atl%2fload-sql",
+    "name": "@sei-atl/load-sql",
+    "rawSpec": "^1.0.0",
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/",
+    "/entity-common"
+  ],
+  "_resolved": "https://registry.npmjs.org/@sei-atl/load-sql/-/load-sql-1.0.12.tgz",
+  "_shasum": "ee0c75e8e8815be4046549e81f86dd8f3aa2e608",
+  "_shrinkwrap": null,
+  "_spec": "@sei-atl/load-sql@^1.0.0",
+  "_where": "C:\\workspaces\\coke\\services\\mfi-action-service",
+  "author": "",
+  "dependencies": {},
+  "description": "",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "ee0c75e8e8815be4046549e81f86dd8f3aa2e608",
+    "tarball": "https://registry.npmjs.org/@sei-atl/load-sql/-/load-sql-1.0.12.tgz",
+    "integrity": "sha512-FxAURjIIrhIoLYzvEsmcP/34iL/sJDTVejBRwT6FY8Vk+ecGOmioq5rp/opzBJ/SJ2zdbvpAllfC4rsighdp+Q==",
+    "fileCount": 3,
+    "unpackedSize": 3704,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb0FmzCRA9TVsSAnZWagAAAusP/27V2ET86SlBFHJUrO54\nmO1ndGyQPupSMv/e5hBj7lcp3Oy0QypjqzKa5U26HQTNLO06rVywckJzFYPf\nslRCcbSdMeCKCGlEyhAMFDGcPuoKBNNuffsUa1ar/hJEez7Y6a+wl0aCKmlk\n6pCdSrQhD0z6+EcK0aWz0lKUTu9+ceIaldXZ6WxmABTcVRGXa4fbLyxduoOU\nBoxjRFM0PM8jgzXgz3QTeo1fY1IR3LRxdi7TUH8q7x+gounO76dAjN1JhOM6\nhEv6GRUs2UvLsuKwgYSSyjBnZjfNd229a49tsGgLoDW8oQCHihQCKYxphIM4\n02Q9qsALdaXOZqAgF49kOVaf2CU/Wdqusdhpni3giv/mXajLUH1qaD2GYerK\nlVdvpPoU3G3OvcpJ+zPqFwFUAMVUWsBJGToOoFYIRp/lk7CuQ9A1ZcKHKs02\noxmIjlOYlgfszGoSU3A97SbAT5eYsb9CVmTFg+oI1Z6fFqYtMD84I7wB02V0\n5rZ+kQ8NKT0C+0SKfJonkNWKvH4n0zdQZsSCbBZdJySLbsk8yl30EqAPVaKJ\nXP7AMRv3FfTCQbn0EdmGF8cVlPdSSgjkUmA1jOsfCt6wTGdnJteQ3QAdnePb\nP/6hCR86budhhDsCBtSrIyZP2MHoySVLfk4bf8FytRZ9/6nRbMHuxZdY61qh\nkey7\r\n=nY0y\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "gitHead": "9a256e2ad3d0d81731542e353d4e9b5ee56e425f",
+  "license": "ISC",
+  "main": "load-sql.js",
+  "maintainers": [
+    {
+      "name": "sei-atl",
+      "email": "amonica@sei.com"
+    }
+  ],
+  "name": "@sei-atl/load-sql",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.13"
+}
