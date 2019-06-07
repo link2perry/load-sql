@@ -40,7 +40,6 @@ class LoadSql {
     var where = [];
     var page = null;
     var size = null;
-    var sorting = null;
     if(typeof q !== 'undefined') {
       if(typeof q.sorting !== 'undefined') {
         orderBy = q.sorting.split('@@@').map(s => _flatten(s));
@@ -104,12 +103,11 @@ class LoadSql {
         callback(sql);
       }
     } else {
-      var me = this;
-      fs.readFile(this.sqlDir + file + '.sql', 'utf8', function(err, sql){
+      fs.readFile(this.sqlDir + file + '.sql', 'utf8', (err, sql) => {
         if (err){
           console.log(err);
         } else {
-          me.sqlCache[file] = sql;
+          this.sqlCache[file] = sql;
           if(where.length > 0) {
             sql = 'select * from (' + sql  + ') temp where ' + where.join(' and ');
           }
