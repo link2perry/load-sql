@@ -193,7 +193,6 @@ class LoadSql {
         size = parseInt(size, 10);
         page = parseInt(page, 10);
         let offset = page * size;
-        size = offset + size;
         params = {
           offset: offset, 
           size: size
