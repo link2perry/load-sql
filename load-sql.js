@@ -193,10 +193,10 @@ class LoadSql {
         size = parseInt(size, 10);
         page = parseInt(page, 10);
         let offset = page * size;
-        params = {
-          offset: offset, 
-          size: size
-        };
+        params = [
+          { _offset: offset }, 
+          { _size: size }
+        ];
       }
     }
     let hasOrder = /\sorder\s+by/i;
@@ -211,10 +211,10 @@ class LoadSql {
         sql += ' order by (select null)';
       }
       if(params) {
-        sql += ` OFFSET ${params.offset} ROWS FETCH NEXT ${params.size} ROWS ONLY`;
+        sql += ` OFFSET @_offset ROWS FETCH NEXT @_size ROWS ONLY`;
       }
       // console.log('sql: ', sql);
-      callback(sql);
+      callback(sql, params);
     } else {
       let me = this;
       fs.readFile(this.sqlDir + file + '.sql', 'utf8', function(err, sql){
@@ -232,10 +232,10 @@ class LoadSql {
           }
 
           if(params) {
-            sql += ` OFFSET ${params.offset} ROWS FETCH NEXT ${params.size} ROWS ONLY`;
+            sql += ` OFFSET @_offset ROWS FETCH NEXT @_size ROWS ONLY`;
           }
           // console.log("sql: ",sql)
-          callback(sql);
+          callback(sql, params);
         }
       });
     }
